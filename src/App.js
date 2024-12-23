@@ -6,16 +6,15 @@ import { Card, CardBody, Container, Button, Col, Row } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 
-const itemArray = new Array(9).fill("empty");
-
 const App = () => {
   const [isCross, setIsCross] = useState(false);
   const [winMessage, setWinMessage] = useState("");
+  const [itemArray, setItemArray] = useState(new Array(9).fill("empty"));
 
   const reloadGame = () => {
     setIsCross(false);
     setWinMessage("");
-    itemArray.fill("empty", 0, 9);
+    setItemArray(new Array(9).fill("empty"));
   }
 
   const winSituations = [
@@ -35,6 +34,7 @@ const App = () => {
         itemArray[winSituations[i][0]] === itemArray[winSituations[i][1]] &&
         itemArray[winSituations[i][0]] === itemArray[winSituations[i][2]]) {
         setWinMessage(`${itemArray[winSituations[i][0]]} wins!`);
+        return; // Stop further checks once a winner is found
       }
     }
   }
@@ -44,12 +44,14 @@ const App = () => {
       return toast(winMessage, { type: "success" });
     }
     if (itemArray[itemNumber] === "empty") {
-      itemArray[itemNumber] = isCross ? "cross" : "circle";
+      const updatedArray = [...itemArray];
+      updatedArray[itemNumber] = isCross ? "cross" : "circle";
+      setItemArray(updatedArray);
       setIsCross(!isCross);
+      checkIsWinner();
     } else {
       return toast("Please choose another box", { type: "error" });
     }
-    checkIsWinner();
   }
 
   return (
@@ -72,7 +74,7 @@ const App = () => {
           }
           <div className="grid">
             {itemArray.map((item, index) => (
-              <Card onClick={() => changeItem(index)} color="warning">
+              <Card key={index} onClick={() => changeItem(index)} color="warning">
                 <CardBody className="box">
                   <Icon name={item} />
                 </CardBody>
