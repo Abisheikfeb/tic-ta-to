@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Abisheikfeb/tic-ta-to.git/static/css/main.740d3504.css",
+    "main.js": "/Abisheikfeb/tic-ta-to.git/static/js/main.d3742fec.js",
+    "index.html": "/Abisheikfeb/tic-ta-to.git/index.html",
+    "main.740d3504.css.map": "/Abisheikfeb/tic-ta-to.git/static/css/main.740d3504.css.map",
+    "main.d3742fec.js.map": "/Abisheikfeb/tic-ta-to.git/static/js/main.d3742fec.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.740d3504.css",
+    "static/js/main.d3742fec.js"
+  ]
+}
