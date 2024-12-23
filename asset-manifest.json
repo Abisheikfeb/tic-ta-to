@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/tic-ta-to.git/static/css/main.740d3504.css",
-    "main.js": "/tic-ta-to.git/static/js/main.d3742fec.js",
-    "index.html": "/tic-ta-to.git/index.html",
-    "main.740d3504.css.map": "/tic-ta-to.git/static/css/main.740d3504.css.map",
-    "main.d3742fec.js.map": "/tic-ta-to.git/static/js/main.d3742fec.js.map"
+    "main.css": "/tic-ta-to/static/css/main.740d3504.css",
+    "main.js": "/tic-ta-to/static/js/main.aee7be60.js",
+    "index.html": "/tic-ta-to/index.html",
+    "main.740d3504.css.map": "/tic-ta-to/static/css/main.740d3504.css.map",
+    "main.aee7be60.js.map": "/tic-ta-to/static/js/main.aee7be60.js.map"
   },
   "entrypoints": [
     "static/css/main.740d3504.css",
-    "static/js/main.d3742fec.js"
+    "static/js/main.aee7be60.js"
   ]
 }
